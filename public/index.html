@@ -29,6 +29,15 @@
             console.log('Conectado al servidor');
         });
 
+        socket.on('nuevo-mensaje', function(payload){
+            console.log('Escuchando: ', payload);
+        });
+
+        socket.on('bandas-activas', function(bands){
+            console.clear();
+            console.table(bands);
+        });
+
     </script>
 </body>
 </html>
